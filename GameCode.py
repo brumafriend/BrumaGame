@@ -11,7 +11,7 @@ def start():
     army = 5000 
     population = 25000
     tension = 10
-    money = 100000
+    money = 50000
     xxx = 100
     while True:
         command = input("Type a command: ")
