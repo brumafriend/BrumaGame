@@ -23,7 +23,7 @@ def start():
             print("!tension - view country's tension")
             print("!conscript - conscript people into the army")
             print("!explore - explore the world")
-            print("!buy - buy more soldiers.")
+            print("!buy - buy more soldiers")
 
         elif command == "!buy":
             print("What would you like to buy?")
