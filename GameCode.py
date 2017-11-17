@@ -8,7 +8,7 @@ def start():
     fr = 1
     ge = 1
     ru = 1
-    army = 500000000 
+    army = 5000
     population = 25000
     tension = 10
     xxx = 100
