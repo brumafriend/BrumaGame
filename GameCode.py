@@ -117,7 +117,9 @@ def start():
                     else:
                         print('It was a disaster!')
                         print('You have lost 400 civilians and 100 soldiers!')
+                        print("You have also lost $500.")
                         print("Your country's tension has increased by 20%.")
+                        money = money - 500
                         army = army - 100
                         population = population - 400
                         tension = tension + 20
