@@ -8,7 +8,7 @@ def start():
     fr = 1
     ge = 1
     ru = 1
-    army = 5000 
+    army = 5000
     population = 25000
     tension = 10
     money = 50000
@@ -162,7 +162,7 @@ def start():
             target = input("")
             if target == "1":
                 if us == 1:
-                    victory = ((army/10000)*50)
+                    victory = (army/(army + 10000)*100)
                     print("The USA has an army of 10,000 men. Your chance of winning is %d percent." % victory)
                     time.sleep(0.5)
                     print("Would you like to go to war with the USA?")
@@ -202,7 +202,7 @@ def start():
                          
             if target == "2":
                 if uk == 1:
-                    victory = ((army/7500)*50)
+                    victory = (army/(army + 7500)*100)
                     print("The UK has an army of 7,500 men. Your chance of winning is %d percent." % victory)
                     time.sleep(0.5)
                     print("Would you like to go to war with the UK?")
@@ -240,7 +240,7 @@ def start():
                 else:
                     print("You have already conquered the UK!")
             if target == "3":
-                victory = ((army/5000)*50)
+                victory = (army/(army + 5000)*100)
                 print("France has an army of 5,000 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with France?")
@@ -280,7 +280,7 @@ def start():
                     print("")
                     
             if target == "4":
-                victory = ((army/4500)*50)
+                victory = (army/(army + 4500)*100)
                 print("Germany has an army of 4,500 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with Germany?")
@@ -320,7 +320,7 @@ def start():
                     print("")
                     
             if target == "5":
-                victory = ((army/50000)*50)
+                victory = (army/(army + 50000)*100)
                 print("Russia has an army of 50000 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with Russia?")
