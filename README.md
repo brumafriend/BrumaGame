@@ -2,7 +2,6 @@
 A game
 Made with python3, also it's a "console game" AKA all text.
 
-**NOTE: I AM NOT GOOD AT CODING. So don't expect this to be good. At all.**
 
 How the game works:  
 You have an army and a population, which number 5000 and 25000 respectively. Your population does not include soldiers. The aim is to conquer all of the 5 of the other countries there are right now: UK, USA, France, Germany and Russia.
