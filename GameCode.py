@@ -31,7 +31,7 @@ def start():
             print("1 = 100 soldiers for $500")
             print("2 = 1000 soldiers for $5,000")
             print("3 = 1500 soldiers for $7,000")
-            print("4 = 2000 soldiers  for $9,500")
+            print("4 = 2000 soldiers for $9,500")
             print("5 = 5000 soldiers for £20,000")
             buy = input("")
             if buy == "1":
@@ -120,8 +120,6 @@ def start():
                         print("You have also lost $500.")
                         print("Your country's tension has increased by 20%.")
                         money = money - 500
-                        if money < 0:
-                            money = 0
                         army = army - 100
                         population = population - 400
                         tension = tension + 20
@@ -180,14 +178,14 @@ def start():
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 2,000 enemy soldiers!')
                             army = army + 2000
+                            print("Your net profit from the war was $500.")
+                            money = money + 500
                             print("As a result of your success, your country's tension has decreased by 5%.")
                             tension = tension - 5
                             if tension < 0:
                                 tension = 0
                             else:
                                 continue
-                            print("Your net profit from the war was $500.")
-                            money = money + 500
                         else:
                             army = army/2
                             print('Failure! Your troops were defeated, %d men were killed.' % army)
@@ -196,8 +194,6 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
-                            if money < 0:
-                                money = 0
                 else:
                     print("You have already conquered the USA!")
                          
@@ -219,14 +215,14 @@ def start():
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 1,500 enemy soldiers!')
                             army = army + 1500
+                            print("Your net profit from the war was $500.")
+                            money = money + 500
                             print("As a result of your success, your country's tension has decreased by 4%.")
                             tension = tension - 4
                             if tension < 0:
                                 tension = 0
                             else:
                                 continue
-                            print("Your net profit from the war was $500.")
-                            money = money + 500
                         else:
                             army = army/2
                             print('Failure! Your troops were defeated, %d men were killed.' % army)
@@ -235,8 +231,6 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
-                            if money < 0:
-                                money = 0
                 else:
                     print("You have already conquered the UK!")
                             
@@ -258,14 +252,14 @@ def start():
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 1000 enemy soldiers!')
                             army = army + 1000
+                            print("Your net profit from the war was $500.")
+                            money = money + 500
                             print("As a result of your success, your country's tension has decreased by 3%.")
                             tension = tension - 3
                             if tension < 0:
                                 tension = 0
                             else:
                                 continue
-                            print("Your net profit from the war was $500.")
-                            money = money + 500
                         else:
                             army = army/2
                             print('Failure! Your troops were defeated, %d men were killed.' % army)
@@ -274,8 +268,6 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
-                            if money < 0:
-                                money = 0
                     
                 else:
                     print("You have already conquered France!")
@@ -298,14 +290,14 @@ def start():
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 750 enemy soldiers!')
                             army = army + 750
+                            print("Your net profit from the war was $500.")
+                            money = money + 500
                             print("As a result of your success, your country's tension has decreased by 2%.")
                             tension = tension - 2
                             if tension < 0:
                                 tension = 0
                             else:
                                 continue
-                            print("Your net profit from the war was $400.")
-                            money = money + 400
                         else:
                             army = army/2
                             print('Failure! Your troops were defeated, %d men were killed.' % army)
@@ -314,8 +306,6 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
-                            if money < 0:
-                                money = 0
                     else:
                         print("You have already conquered Germany!")
                     
@@ -337,14 +327,14 @@ def start():
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 7500 enemy soldiers!')
                             army = army + 7500
+                            print("Your net profit from the war was $500.")
+                            money = money + 500
                             print("As a result of your success, your country's tension has decreased by 10%.")
                             tension = tension - 10
                             if tension < 0:
                                 tension = 0
                             else:
                                 continue
-                            print("Your net profit from the war was $5000.")
-                            money = money + 5000
                         else:
                             army = army/1.5
                             print('Failure! Your troops were defeated, %d men were killed.' % army)
@@ -353,8 +343,6 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
-                            if money < 0:
-                                money = 0
                     else:
                         print("You have already conquered Russia!")
             
@@ -368,6 +356,10 @@ def start():
         else:
             print("Incorrect command!")
 
+        if money < 0:
+            time.sleep(1)
+            print("You have no money!")
+            money = 0
         
         if tension > 50:
             time.sleep(1)
