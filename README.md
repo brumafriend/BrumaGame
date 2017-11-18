@@ -21,3 +21,5 @@ The mechanics:
 **Exploring**: You need 400 civs and 100 soldiers to explore. Exploring can result in gaining civilians and soldiers, this also decreases tension. It can also result in disaster - making you lose the people sent out and causing an increase in tension of 20%.
 
 **War**: The most important aspect of the game is war. Waging war against another country is simple; winning is not. Your chance to win is (x/y)*50 with x being your troops and y being the enemy's. So, if you have equal numbers then there's a 50% chance you win. Upon winning, tension is decreased and you gain troops. You can't attack the same country twice. Upon losing, tension increases and you lose half of your troops. You can try to attack the country again at a later date.
+
+**Money**: (as of 22:00, 17/11/2017) Money can be used to purchase soldiers. In a desperate situation? Buy your way out of it! You start with $50,000. Winning wars earns you money, losing wars loses you money. Money can also be earned by exploring.
