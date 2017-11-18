@@ -24,6 +24,47 @@ def start():
             print("!conscript - conscript people into the army")
             print("!explore - explore the world")
             print("!buy - buy more soldiers")
+            print("!parade - hold a parade")
+
+        elif command == "!parade":
+            print("Would you like to hold a parade? It will cost $10,000.")
+            print("It will also reset your country's tension to zero percent!")
+            print("1=yes/2=no")
+            parade = input("")
+            if parade == "1":
+                money = money - 10000
+                if money < 0:
+                    money = money + 10000
+                    print("You do not have enough money to have a parade.")
+                else:
+                    time.sleep(0.1)
+                    print("Preparing parade...")
+                    time.sleep(0.5)
+                    print("Carrying out parade...")
+                    time.sleep(1)
+                    if random.randint(0,100) < 90:
+                        print("The parade was a success!")
+                        time.sleep(0.5)
+                        print("Your country's tension is now zero percent!")
+                        time.sleep(0.5)
+                        print("Followin the parade, a visting group of 100 civilians have decided to live in %s!" % country)
+                    else:
+                        print("The parade was a disaster!")
+                        time.sleep(0.5)
+                        print("All the parade did was show off your frivolous spenging habits!")
+                        time.sleep(1)
+                        print("Tension in your country has risen by 51%! A civil war is possible!")
+                        tension = tension + 51
+                        time.sleep(0.5)
+                        print("Furthermore, the country of %s lies in ruins! You lose an additional $10,000." % country)                
+                        money = money - 10000
+                        if money < 0:
+                            money = 0
+                        else:
+                            continue
+
+            else:
+                print("")
 
         elif command == "!buy":
             print("What would you like to buy?")
