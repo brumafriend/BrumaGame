@@ -12,7 +12,7 @@ def start():
     population = 25000
     tension = 10
     money = 50000
-    xxx = 100
+    startplease = 1
     while True:
         command = input("Type a command: ")
         if command == "!help":
