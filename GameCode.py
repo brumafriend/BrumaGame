@@ -40,7 +40,7 @@ def start():
                 money = money - 500
                 if money < 0:
                     print("No money. Could not purchase soldiers.")
-                    money = 0
+                    money = money + 500
                     army = army - 100
             elif buy == "2":
                 print("You have purchased 1000 soldiers.")
@@ -48,7 +48,7 @@ def start():
                 money = money - 5000
                 if money < 0:
                     print("No money. Could not purchase soldiers.")
-                    money = 0
+                    money = money + 5000
                     army = army - 1000
             elif buy == "3":
                 print("You have purchased 1500 soldiers.")
@@ -56,7 +56,7 @@ def start():
                 money = money - 7000
                 if money < 0:
                     print("No money. Could not purchase soldiers.")
-                    money = 0
+                    money = money + 7000
                     army = army - 1500
             elif buy == "4":
                 print("You have purchased 2000 soldiers.")
@@ -64,7 +64,7 @@ def start():
                 money = money - 9500
                 if money < 0:
                     print("No money. Could not purchase soldiers.")
-                    money = 0
+                    money = money + 9500
                     army = army - 2000
             elif buy == "5":
                 print("You have purchased 5000 soldiers")
@@ -72,7 +72,7 @@ def start():
                 money = money - 20000
                 if money < 0:
                     print("No money. Could not purchase soldiers.")
-                    money = 0
+                    money = money + 20000
                     army = army - 5000
             else:
                 print("Incorrect command!")
@@ -120,6 +120,8 @@ def start():
                         print("You have also lost $500.")
                         print("Your country's tension has increased by 20%.")
                         money = money - 500
+                        if money < 0:
+                            money = 0
                         army = army - 100
                         population = population - 400
                         tension = tension + 20
@@ -194,6 +196,8 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                            if money < 0:
+                                money = 0
                 else:
                     print("You have already conquered the USA!")
                          
@@ -231,6 +235,8 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                            if money < 0:
+                                money = 0
                 else:
                     print("You have already conquered the UK!")
                             
@@ -268,6 +274,8 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                            if money < 0:
+                                money = 0
                     
                 else:
                     print("You have already conquered France!")
@@ -306,6 +314,8 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                            if money < 0:
+                                money = 0
                     else:
                         print("You have already conquered Germany!")
                     
@@ -343,6 +353,8 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                            if money < 0:
+                                money = 0
                     else:
                         print("You have already conquered Russia!")
             
@@ -356,10 +368,6 @@ def start():
         else:
             print("Incorrect command!")
 
-        if money < 0:
-            time.sleep(1)
-            print("You have no money!")
-            money = 0
         
         if tension > 50:
             time.sleep(1)
