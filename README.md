@@ -22,4 +22,6 @@ The mechanics:
 
 **War**: The most important aspect of the game is war. Waging war against another country is simple; winning is not. Your chance to win is (x/y)*50 with x being your troops and y being the enemy's. So, if you have equal numbers then there's a 50% chance you win. Upon winning, tension is decreased and you gain troops. You can't attack the same country twice. Upon losing, tension increases and you lose half of your troops. You can try to attack the country again at a later date.
 
-**Money**: (as of 22:00, 17/11/2017) Money can be used to purchase soldiers. In a desperate situation? Buy your way out of it! You start with $50,000. Winning wars earns you money, losing wars loses you money. Money can also be earned by exploring.
+**Money**: Money can be used to purchase soldiers. In a desperate situation? Buy your way out of it! You start with $50,000. Winning wars earns you money, losing wars loses you money. Money can also be earned by exploring.
+
+**Parades**: (as of 18/11/2017) Country tension too high? Have some fun! A parade costs $10,000 but it will reset your tension to zero percent, giving you a second chance at retaining authority! 
