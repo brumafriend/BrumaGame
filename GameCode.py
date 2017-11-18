@@ -2,6 +2,12 @@ import random
 import time
 import os
 
+def clear_screen():
+    if os.name in [ 'posix', 'mac' ]:
+        os.system('clear')
+    else:
+        os.system('cls')
+
 def start():
     us = 1
     uk = 1
@@ -24,6 +30,7 @@ def start():
             print("!conscript - conscript people into the army")
             print("!explore - explore the world")
             print("!buy - buy more soldiers")
+            print("!quit - exit the game")
 
         elif command == "!buy":
             print("What would you like to buy?")
@@ -352,7 +359,11 @@ def start():
             print("A country's tension goes up if a war is lost.")
             print("A country's tension goes down if a war is won.")
             print("If a country's tension is above 50%, a civil war may begin.")
-            
+
+        elif command == "!quit":
+                print("Exiting.")
+                return
+
         else:
             print("Incorrect command!")
 
@@ -408,7 +419,7 @@ def start():
 
 country = input("Please enter the name of your country: ")
 time.sleep(0.5)
-os.system('cls')
+clear_screen()
 print("Your country is called %s" % country)
 print("")
 time.sleep(0.5)
