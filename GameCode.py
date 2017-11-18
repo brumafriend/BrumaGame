@@ -12,7 +12,7 @@ def start():
     population = 25000
     tension = 10
     money = 50000
-    startplease = 1
+    xxx = 100
     while True:
         command = input("Type a command: ")
         if command == "!help":
@@ -167,8 +167,8 @@ def start():
                     time.sleep(0.5)
                     print("Would you like to go to war with the USA?")
                     print("1=yes/2=no")
-                    answer = int(input(""))
-                    if answer == 1:
+                    answer = input("")
+                    if answer == "1":
                         print("Your troops are travelling to America...")
                         time.sleep(1)
                         print("Your troops are fighting...")
@@ -194,6 +194,9 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                    else:
+                        print("")
+                        
                 else:
                     print("You have already conquered the USA!")
                          
@@ -204,8 +207,8 @@ def start():
                     time.sleep(0.5)
                     print("Would you like to go to war with the UK?")
                     print("1=yes/2=no")
-                    answer = int(input(""))
-                    if answer == 1:
+                    answer = input("")
+                    if answer == "1":
                         print("Your troops are travelling to the UK...")
                         time.sleep(1)
                         print("Your troops are fighting...")
@@ -231,17 +234,19 @@ def start():
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
+                    
+                    else:
+                        print("")
                 else:
                     print("You have already conquered the UK!")
-                            
             if target == "3":
                 victory = ((army/5000)*50)
                 print("France has an army of 5,000 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with France?")
                 print("1=yes/2=no")
-                answer = int(input(""))
-                if answer == 1:
+                answer = input("")
+                if answer == "1":
                     if fr == 1:
                         print("Your troops are travelling to France...")
                         time.sleep(1)
@@ -269,8 +274,10 @@ def start():
                             print("The defeat cost you $500")
                             money = money - 500
                     
+                    else:
+                        print("You have already conquered France!")
                 else:
-                    print("You have already conquered France!")
+                    print("")
                     
             if target == "4":
                 victory = ((army/4500)*50)
@@ -278,8 +285,8 @@ def start():
                 time.sleep(0.5)
                 print("Would you like to go to war with Germany?")
                 print("1=yes/2=no")
-                answer = int(input(""))
-                if answer == 1:
+                answer = input("")
+                if answer == "1":
                     if ge == 1:
                         print("Your troops are travelling to Germany...")
                         time.sleep(1)
@@ -308,6 +315,9 @@ def start():
                             money = money - 500
                     else:
                         print("You have already conquered Germany!")
+               
+                else:
+                    print("")
                     
             if target == "5":
                 victory = ((army/50000)*50)
@@ -414,7 +424,3 @@ print("")
 time.sleep(0.5)
 print("Type !help to see commands")
 start()
-
-
-
-   
