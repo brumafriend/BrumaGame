@@ -24,4 +24,4 @@ The mechanics:
 
 **Money**: Money can be used to purchase soldiers. In a desperate situation? Buy your way out of it! You start with $50,000. Winning wars earns you money, losing wars loses you money. Money can also be earned by exploring.
 
-**Parades**: (as of 18/11/2017) Country tension too high? Have some fun! A parade costs $10,000 but it will reset your tension to zero percent, giving you a second chance at retaining authority! A parade does not come without risk. There is a 5% chance that the parade will end in disaster, causing a 51% increase in tension (meaning a civil war is possible) and costing you an extra $10.000!
+**Parades**: (as of 18/11/2017) Country tension too high? Have some fun! A parade costs $10,000 but it will reset your tension to zero percent, giving you a second chance at retaining authority! A parade does not come without risk. There is a 5% chance that the parade will end in disaster, causing a 51% increase in tension (meaning a civil war is possible) and costing you an extra $10,000!
