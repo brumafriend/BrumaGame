@@ -25,6 +25,39 @@ def start():
             print("!explore - explore the world")
             print("!buy - buy more soldiers")
             print("!parade - hold a parade")
+            print("!tax - tax your population")
+            
+        elif command == "!tax":
+            print("Taxing your population can help raise funds for war, but also causes increased tension")
+            time.sleep(0.5)
+            print("For every person taxed, you gain $1 but tension will rise.")
+            time.sleep(0.5)
+            print("How many people would you like to tax?")
+            print("1 = Your entire population")
+            print("2 = Half of your population")
+            tax = input("")
+            if tax == "1":
+                print("You have taxed your entire population.")
+                time.sleep(0.1)
+                wholemoney = population*0.15
+                print("As a result, you have raised $%d." % wholemoney)
+                money = money + wholemoney
+                time.sleep(0.5)
+                tensionincrease = (population)*0.001
+                print("However, tension has also increased by %d percent." % tensionincrease)
+                tension = tension + tensionincrease
+            if tax == "2":
+                print("You have taxed half of your population.")
+                time.sleep(0.1)
+                halfmoney = (population/2)*0.15
+                print("As a result you have raised $%d." % halfmoney)
+                money = money + halfmoney
+                time.sleep(0.5)
+                tensionincrease = (population/2)*0.001
+                print("However, tension has also increased by %d percent." % tensionincrease)
+                tension = tension + tensionincrease
+            else:
+                print("Incorrect command!")
 
         elif command == "!parade":
             print("Would you like to hold a parade? It will cost $10,000.")
@@ -46,8 +79,9 @@ def start():
                         print("The parade was a success!")
                         time.sleep(0.5)
                         print("Your country's tension is now zero percent!")
+                        tension = 0
                         time.sleep(0.5)
-                        print("Followin the parade, a visting group of 100 civilians have decided to live in %s!" % country)
+                        print("Following the parade, a visting group of 100 civilians have decided to live in %s!" % country)
                     else:
                         print("The parade was a disaster!")
                         time.sleep(0.5)
