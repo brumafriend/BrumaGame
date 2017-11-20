@@ -23,4 +23,6 @@ The mechanics:
 
 **Money**: Money can be used to purchase soldiers. In a desperate situation? Buy your way out of it! You start with $50,000. Winning wars earns you money, losing wars loses you money. Money can also be earned by exploring.
 
-**Parades**: (as of 18/11/2017) Country tension too high? Have some fun! A parade costs $10,000 but it will reset your tension to zero percent, giving you a second chance at retaining authority! A parade does not come without risk. There is a 5% chance that the parade will end in disaster, causing a 51% increase in tension (meaning a civil war is possible) and costing you an extra $10,000!
+**Parades**: Country tension too high? Have some fun! A parade costs $10,000 but it will reset your tension to zero percent, giving you a second chance at retaining authority! A parade does not come without risk. There is a 5% chance that the parade will end in disaster, causing a 51% increase in tension (meaning a civil war is possible) and costing you an extra $10,000!
+
+**Tax:** (as of 20/11/2017) Low on money? Tax people. Not surprisingly, taxation isn't popular and, whilst raising funds for war, will also result in a huge increase in tension. Taxation should only really be used in emergencies or if you have a very low level of tension. For each person taxed, you gain $1. The tension increase per tax is: **(n)*0.00092** with _n_ being the number of people taxed.
