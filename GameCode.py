@@ -361,7 +361,7 @@ def start():
                     print("")
                     
             if target == "5":
-                if uk + ge + fr + us == 0:
+                if uk + ge + fr + us == 4:
                     print("You must defeat at least one country before attacking Russia")
                 else:
                     victory = (army/(army + 50000)*100)
