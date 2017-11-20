@@ -361,41 +361,44 @@ def start():
                     print("")
                     
             if target == "5":
-                victory = (army/(army + 50000)*100)
-                print("Russia has an army of 50000 men. Your chance of winning is %d percent." % victory)
-                time.sleep(0.5)
-                print("Would you like to go to war with Russia?")
-                print("1=yes/2=no")
-                answer = int(input(""))
-                if answer == 1:
-                    if ru == 1:
-                        print("Your troops are travelling to Russia...")
-                        time.sleep(1)
-                        print("Your troops are fighting...")
-                        time.sleep(1)
-                        if random.randint(0,100) < victory:
-                            ru = 0
-                            print('Success! Your troops defeated the opposition soldiers!')
-                            print('You were also able to convert 7500 enemy soldiers!')
-                            army = army + 7500
-                            print("Your net profit from the war was $500.")
-                            money = money + 500
-                            print("As a result of your success, your country's tension has decreased by 10%.")
-                            tension = tension - 10
-                            if tension < 0:
-                                tension = 0
-                            else:
-                                continue
-                        else:
-                            army = army/1.5
-                            print('Failure! Your troops were defeated, %d men were killed.' % army)
-                            print("As a result of your failure, your country's tension has increased by 5%")
-                            tension = tension + 5
+                if uk + ge + fr + us = 0:
+                    print("You must defeat at least one country before attacking Russia")
+                else:
+                    victory = (army/(army + 50000)*100)
+                    print("Russia has an army of 50000 men. Your chance of winning is %d percent." % victory)
+                    time.sleep(0.5)
+                    print("Would you like to go to war with Russia?")
+                    print("1=yes/2=no")
+                    answer = int(input(""))
+                    if answer == 1:
+                        if ru == 1:
+                            print("Your troops are travelling to Russia...")
                             time.sleep(1)
-                            print("The defeat cost you $500")
-                            money = money - 500
-                    else:
-                        print("You have already conquered Russia!")
+                            print("Your troops are fighting...")
+                            time.sleep(1)
+                            if random.randint(0,100) < victory:
+                                ru = 0
+                                print('Success! Your troops defeated the opposition soldiers!')
+                                print('You were also able to convert 7500 enemy soldiers!')
+                                army = army + 7500
+                                print("Your net profit from the war was $500.")
+                                money = money + 500
+                                print("As a result of your success, your country's tension has decreased by 10%.")
+                                tension = tension - 10
+                                if tension < 0:
+                                    tension = 0
+                                else:
+                                    continue
+                            else:
+                                army = army/1.5
+                                print('Failure! Your troops were defeated, %d men were killed.' % army)
+                                print("As a result of your failure, your country's tension has increased by 5%")
+                                tension = tension + 5
+                                time.sleep(1)
+                                print("The defeat cost you $500")
+                                money = money - 500
+                        else:
+                            print("You have already conquered Russia!")
             
         elif command == "!tension":
             print("Your country's tension is %d percent" % tension)
