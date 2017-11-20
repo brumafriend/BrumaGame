@@ -43,7 +43,7 @@ def start():
                 print("As a result, you have raised $%d." % wholemoney)
                 money = money + wholemoney
                 time.sleep(0.5)
-                tensionincrease = (population)*0.001
+                tensionincrease = (population)*0.00092
                 print("However, tension has also increased by %d percent." % tensionincrease)
                 tension = tension + tensionincrease
             if tax == "2":
@@ -53,7 +53,7 @@ def start():
                 print("As a result you have raised $%d." % halfmoney)
                 money = money + halfmoney
                 time.sleep(0.5)
-                tensionincrease = (population/2)*0.001
+                tensionincrease = (population/2)*0.00092
                 print("However, tension has also increased by %d percent." % tensionincrease)
                 tension = tension + tensionincrease
             else:
