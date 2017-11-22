@@ -1,13 +1,13 @@
 This is the roadmap for the game, in a rough chronological order:
 Please note that GUI implementation is an aim but a looming one which may not happen for a while.
 
-1. More countries. [SOON™]
+1. More countries. [PRIORITY]
 
 2. More variation amongst countries - differences other than army size.
 
 3. More mechanics:
     i. A taxation system [DONE]
-    ii. More detailed tension system, so that above x% you get certain debuffs rather than just civil war. [PRIORITY]
+    ii. More detailed tension system, so that above x% you get certain debuffs rather than just civil war. [DONE]
     
 4. A solution to the Russia problem - if you conscript and buy soldiers at the start, you have a 1/3 chance of beating Russia and from
    there you've basically won the game.
