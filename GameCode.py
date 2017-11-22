@@ -448,6 +448,26 @@ def start():
             time.sleep(1)
             print("You have no money!")
             money = 0
+            
+        if tension > 20 and tension < 25:
+            time.sleep(1.5)
+            if random.randint(0,100) < 10:
+                print("")
+                print("A revolt has broken out amongst your population due to high tension")
+                print("In putting down the revolt, you have lost 100 soldiers.")
+                army -= 100
+                population -= 10
+                print("")
+                
+        if tension >= 25 and tension <= 50:
+            time.sleep(1.5)
+            if random.int(0,100) < 15:
+                print("")
+                print("A revolt has broken out amongst your population due to high tension.")
+                print("In putting down the revolt, you have lost 200 soldiers.")
+                army -= 200
+                population -=100
+                print("")
         
         if tension > 50:
             time.sleep(1)
