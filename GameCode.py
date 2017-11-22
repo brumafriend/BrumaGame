@@ -205,10 +205,14 @@ def start():
         elif command == "!conscript":
             print('How many people would you like to conscript?')
             print('(1000 people conscripted = tension increase of 10%)')
-            con = int(input(""))
+            try:
+                con = int(input(""))
+            except ValueError:
+                print("Incorrect command!")
+                con = 0
             if con > population:
                 print("Can't conscript more people than live in your country.")
-            elif con < 100:
+            elif con < 100 and con > 0:
                 print("You must conscript more than 100 people.")
             elif con + army > 10000:
                 print("You can only conscript up to 10000 troops!")
