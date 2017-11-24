@@ -100,7 +100,7 @@ def start():
             print("2 = 1000 soldiers for $5,000")
             print("3 = 1500 soldiers for $7,000")
             print("4 = 2000 soldiers for $9,500")
-            print("5 = 5000 soldiers for £20,000")
+            print("5 = 5000 soldiers for $20,000")
             buy = input("")
             if buy == "1":
                 print("You have purchased 100 soldiers.")
@@ -504,7 +504,7 @@ def getHelp():
 
 country = input("Please enter the name of your country: ")
 time.sleep(0.5)
-os.system('cls')
+os.system('cls' or 'clear')
 print("Your country is called %s." % country.title())
 print("")
 time.sleep(0.5)
