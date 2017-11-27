@@ -4,7 +4,7 @@ Made with python3, also it's a "console game" AKA all text.
 
 
 How the game works:  
-You have an army and a population, which number 5000 and 25000 respectively. Your population does not include soldiers. The aim is to conquer all of the 5 of the other countries there are right now: UK, USA, France, Germany and Russia.
+You have an army and a population, which number 5000 and 25000 respectively. Your population does not include soldiers. The aim is to conquer all of the 5 of the other countries there are right now: UK, USA, France, Germany, Spain and Russia.
 
 You can lose in two ways. Firstly, if your population & army is so small that you can't win any war or explore to find more soldiers. Secondly, and most importantly, through **tension**:
 
