@@ -561,7 +561,7 @@ def start():
 
 country = input("Please enter the name of your country: ")
 time.sleep(0.5)
-os.system('cls' or 'clear')
+os.system('cls' and 'clear')
 print("Your country is called %s" % country)
 print("")
 time.sleep(0.5)
