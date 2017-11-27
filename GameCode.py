@@ -454,7 +454,7 @@ def start():
                         print("Your troops are fighting...")
                         time.sleep(1)
                         if random.randint(0,100) < victory:
-                            ru = 0
+                            sp = 0
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 1750 enemy soldiers!')
                             army = army + 1750
