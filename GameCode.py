@@ -8,6 +8,7 @@ def start():
     fr = 1
     ge = 1
     ru = 1
+    sp = 1
     army = 5000
     population = 25000
     tension = 10
@@ -238,6 +239,7 @@ def start():
             print("3 = France")
             print("4 = Germany")
             print("5 = Russia")
+            print("6 = Spain")
             target = input("")
             if target == "1":
                 if us == 1:
@@ -437,6 +439,44 @@ def start():
                                 money = money - 3500
                         else:
                             print("You have already conquered Russia!")
+                            
+            if target == "6":
+                victory = (army/(army + 8500)*100)
+                print("Spain has an army of 8500 men. Your chance of winning is %d percent." % victory)
+                time.sleep(0.5)
+                print("Would you like to go to war with Spain?")
+                print("1=yes/2=no")
+                answer = int(input(""))
+                if answer == 1:
+                    if sp == 1:
+                        print("Your troops are travelling to Spain...")
+                        time.sleep(1)
+                        print("Your troops are fighting...")
+                        time.sleep(1)
+                        if random.randint(0,100) < victory:
+                            ru = 0
+                            print('Success! Your troops defeated the opposition soldiers!')
+                            print('You were also able to convert 1750 enemy soldiers!')
+                            army = army + 1750
+                            print("Your net profit from the war was $11500.")
+                            money = money + 11500
+                            print("As a result of your success, your country's tension has decreased by 12%.")
+                            tension = tension - 12
+                            if tension < 0:
+                                tension = 0
+                            else:
+                                continue
+                        else:
+                            army = army*0.73
+                            print('Failure! Your troops were defeated, %d men escaped.' % army)
+                            print("As a result of your failure, your country's tension has increased by 16%")
+                            tension = tension + 16
+                            time.sleep(1)
+                            print("The defeat cost you $2500")
+                            money = money - 2500
+                    else:
+                        print("You have already conquered Spain!")                
+             
             
         elif command == "!tension":
             print("Your country's tension is %d percent" % tension)
@@ -513,10 +553,11 @@ def start():
                 print("Your country's tension is now 35 percent.")
                 tension = 35
                 
-        if ru + ge + uk + us + fr == 0:
+        if ru + ge + uk + us + fr + sp == 0:
             time.sleep(2)
             print("YOU HAVE WON, CONGRATULATIONS!")
-            time.sleep(20)
+            time.sleep(5)
+            Return
 
 country = input("Please enter the name of your country: ")
 time.sleep(0.5)
