@@ -268,7 +268,7 @@ def start():
                             else:
                                 continue
                         else:
-                            army = army*0.75
+                            army = army*0.69
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 10%")
                             tension = tension + 10
@@ -308,7 +308,7 @@ def start():
                             else:
                                 continue
                         else:
-                            army = army*0.78
+                            army = army*0.63
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 10%")
                             tension = tension + 10
@@ -347,7 +347,7 @@ def start():
                             else:
                                 continue
                         else:
-                            army = army*0.7
+                            army = army*0.68
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 12%")
                             tension = tension + 12
@@ -387,7 +387,7 @@ def start():
                             else:
                                 continue
                         else:
-                            army = army*0.75
+                            army = army*0.67
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 14%")
                             tension = tension + 14
@@ -430,7 +430,7 @@ def start():
                                 else:
                                     continue
                             else:
-                                army = army*0.6
+                                army = army*0.56
                                 print('Failure! Your troops were defeated, %d men escaped.' % army)
                                 print("As a result of your failure, your country's tension has increased by 15%")
                                 tension = tension + 15
@@ -467,7 +467,7 @@ def start():
                             else:
                                 continue
                         else:
-                            army = army*0.73
+                            army = army*0.67
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 16%")
                             tension = tension + 16
