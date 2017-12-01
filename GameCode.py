@@ -21,6 +21,7 @@ def start():
     while True:
         command = input("Type a command: ")
         if command == "!help":
+            print("")
             print("!army - view size of army")
             print("!population - view size of population")
             print("!money - view your country's treasury")
@@ -32,6 +33,7 @@ def start():
             print("!parade - hold a parade")
             print("!tax - tax your population")
             print("!politics - give your country a political belief")
+            print("")
 
         elif command == "!politics":
             print("")
@@ -619,7 +621,7 @@ country = input("Please enter the name of your country: ")
 time.sleep(0.5)
 os.system('cls' or 'clear')
 print("Your country is called %s" % country)
-print("")
 time.sleep(0.5)
+print("")
 print("Type !help to see commands")
 start()
