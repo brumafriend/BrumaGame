@@ -13,6 +13,10 @@ def start():
     population = 25000
     tension = 10
     money = 50000
+    pol = 1
+    comm = 0
+    lib = 0
+    con = 0
     xxx = 100
     while True:
         command = input("Type a command: ")
@@ -27,6 +31,47 @@ def start():
             print("!buy - buy more soldiers")
             print("!parade - hold a parade")
             print("!tax - tax your population")
+            print("!politics - give your country a political belief")
+
+        elif command == "!politics":
+            print("")
+            if pol == 1:
+                print("Your country currently has no political belief.")
+                time.sleep(0.2)
+                print("You may change your political belief once, and only once.")
+                time.sleep(0.2)
+                print("What political belief would you like your party to adpot?")
+                time.sleep(0.1)
+                print("1 = Liberal - lower chance of civil war")
+                print("2 = Conservative - lower tension increases")
+                print("3 = Communist - army has higher chance to win wars")
+                pchoice = input("")
+                if pchoice == "1":
+                    b = "Liberal"
+                    lib = lib + 5
+                    pol = 0
+                    print("Your country is now liberal!")
+                    time.sleep(0.2)
+                    print("as a result, the chance of a civil war breaking out is 5% less.")
+                    print("")
+                elif pchoice == "2":
+                    b = "Conservative"
+                    con = con + 5
+                    pol = 0
+                    print("Your country is now Conservative!")
+                    time.sleep(0.2)
+                    print("As a result of this, tension increase is lowered by 5%.")
+                    print("")
+                elif pchoice == "3":
+                    b = "Communist"
+                    comm = comm + 5
+                    pol = 0
+                    print("Your country is now communist!")
+                    time.sleep(0.2)
+                    print("As a result, your chance of winning any war is 5% higher than usual.")
+                    print("")
+            else:
+                print("You country is currently %s." % b)        
             
         elif command == "!tax":
             print("Taxing your population can help raise funds for war, but also causes increased tension")
@@ -56,7 +101,7 @@ def start():
                 time.sleep(0.5)
                 tensionincrease = (population/2)*0.00092
                 print("However, tension has also increased by %d percent." % tensionincrease)
-                tension = tension + tensionincrease
+                tension = tension + tensionincrease - con
             else:
                 print("Incorrect command!")
 
@@ -89,7 +134,7 @@ def start():
                         print("All the parade did was show off your frivolous spenging habits!")
                         time.sleep(1)
                         print("Tension in your country has risen by 51%! A civil war is possible!")
-                        tension = tension + 51
+                        tension = tension + 51 - con
                         time.sleep(0.5)
                         print("Furthermore, the country of %s lies in ruins! You lose an additional $10,000." % country)                
                         money = money - 10000
@@ -198,7 +243,7 @@ def start():
                         money = money - 500
                         army = army - 100
                         population = population - 400
-                        tension = tension + 20
+                        tension = tension + 20 - con
                 
             if explore == "2":
                 print("")
@@ -243,7 +288,7 @@ def start():
             target = input("")
             if target == "1":
                 if us == 1:
-                    victory = (army/(army + 10000)*100)
+                    victory = (army/(army + 10000)*100) + comm
                     print("The USA has an army of 10,000 men. Your chance of winning is %d percent." % victory)
                     time.sleep(0.5)
                     print("Would you like to go to war with the USA?")
@@ -283,7 +328,7 @@ def start():
                          
             if target == "2":
                 if uk == 1:
-                    victory = (army/(army + 7500)*100)
+                    victory = (army/(army + 7500)*100) + comm
                     print("The UK has an army of 7,500 men. Your chance of winning is %d percent." % victory)
                     time.sleep(0.5)
                     print("Would you like to go to war with the UK?")
@@ -311,7 +356,7 @@ def start():
                             army = army*0.63
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 10%")
-                            tension = tension + 10
+                            tension = tension + 10 - con
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
@@ -321,7 +366,7 @@ def start():
                 else:
                     print("You have already conquered the UK!")
             if target == "3":
-                victory = (army/(army + 5000)*100)
+                victory = (army/(army + 5000)*100) + comm
                 print("France has an army of 5,000 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with France?")
@@ -350,7 +395,7 @@ def start():
                             army = army*0.68
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 12%")
-                            tension = tension + 12
+                            tension = tension + 12 - con
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
@@ -361,7 +406,7 @@ def start():
                     print("")
                     
             if target == "4":
-                victory = (army/(army + 4500)*100)
+                victory = (army/(army + 4500)*100) + comm
                 print("Germany has an army of 4,500 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with Germany?")
@@ -390,7 +435,7 @@ def start():
                             army = army*0.67
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 14%")
-                            tension = tension + 14
+                            tension = tension + 14 - con
                             time.sleep(1)
                             print("The defeat cost you $500")
                             money = money - 500
@@ -404,7 +449,7 @@ def start():
                 if uk + ge + fr + us + sp == 5:
                     print("You must defeat at least one country before attacking Russia")
                 else:
-                    victory = (army/(army + 50000)*100)
+                    victory = (army/(army + 50000)*100) + comm
                     print("Russia has an army of 50000 men. Your chance of winning is %d percent." % victory)
                     time.sleep(0.5)
                     print("Would you like to go to war with Russia?")
@@ -433,7 +478,7 @@ def start():
                                 army = army*0.56
                                 print('Failure! Your troops were defeated, %d men escaped.' % army)
                                 print("As a result of your failure, your country's tension has increased by 15%")
-                                tension = tension + 15
+                                tension = tension + 15 - con
                                 time.sleep(1)
                                 print("The defeat cost you $3500")
                                 money = money - 3500
@@ -441,7 +486,7 @@ def start():
                             print("You have already conquered Russia!")
                             
             if target == "6":
-                victory = (army/(army + 8500)*100)
+                victory = (army/(army + 8500)*100) + comm
                 print("Spain has an army of 8500 men. Your chance of winning is %d percent." % victory)
                 time.sleep(0.5)
                 print("Would you like to go to war with Spain?")
@@ -470,7 +515,7 @@ def start():
                             army = army*0.67
                             print('Failure! Your troops were defeated, %d men escaped.' % army)
                             print("As a result of your failure, your country's tension has increased by 16%")
-                            tension = tension + 16
+                            tension = tension + 16 - con
                             time.sleep(1)
                             print("The defeat cost you $2500")
                             money = money - 2500
@@ -492,10 +537,21 @@ def start():
             time.sleep(1)
             print("You have no money!")
             money = 0
+
+        if army < 100 or population < 0:
+            print("You have lost all military influence")
+            print("Your civilians have fled and your army has turned against you.")
+            time.sleep(2)
+            print("Game Over.")
+            time.sleep(5)
+            Return
+
+        if tension < 0:
+            tension = 0
             
         if tension > 20 and tension < 25:
             time.sleep(1.5)
-            if random.randint(0,100) < 10:
+            if random.randint(0,100) < 5:
                 print("")
                 print("A revolt has broken out amongst your population due to high tension")
                 print("In putting down the revolt, you have lost 100 soldiers.")
@@ -505,7 +561,7 @@ def start():
                 
         if tension >= 25 and tension <= 50:
             time.sleep(1.5)
-            if random.int(0,100) < 15:
+            if random.int(0,100) < 10:
                 print("")
                 print("A revolt has broken out amongst your population due to high tension.")
                 print("In putting down the revolt, you have lost 200 soldiers.")
@@ -516,7 +572,7 @@ def start():
         if tension > 50:
             time.sleep(1)
             print("Your tension is now above 50 percent! There is a chance of civil war.")
-            if random.randint(0,100) < 40:
+            if random.randint(0,100) < (40 - lib):
                 time.sleep(2)
                 print('Civil war! The country has turned against you!')
                 if random.randint(0,100) < 60:
