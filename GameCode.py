@@ -254,21 +254,26 @@ def start():
             print('How many people would you like to conscript?')
             print('(1000 people conscripted = tension increase of 10%)')
             try:
-                con = int(input(""))
+                cons = int(input(""))
             except ValueError:
                 print("Incorrect command!")
-                con = 0
-            if con > population:
+                cons = 0
+            if cons > population:
                 print("Can't conscript more people than live in your country.")
-            elif con < 100 and con > 0:
+            elif cons < 100 and con > 0:
                 print("You must conscript more than 100 people.")
-            elif con + army > 10000:
-                print("You can only conscript up to 10000 troops!")
+            elif cons + army > 10000:
+                print("You can only conscript soldiers such that your army has 10000 troops!")
+                time.sleep(0.5)
+                cons = 10000 - army
+                army = army + cons
+                print("%d people have been conscripted." % cons)
+                tension = tension + (cons/1000)
             else:
-                army = army + con
-                population = population - con
-                tension = tension + (con/1000)
-                print("You have conscripted %d people" % con)
+                army = army + cons
+                population = population - cons
+                tension = tension + (cons/1000)
+                print("You have conscripted %d people" % cons)
                 print("Your population is now %d" % population)
                 print("Your tension is now %d percent" % tension)
             
