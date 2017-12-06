@@ -221,10 +221,10 @@ def start():
                         if random.randint(0,100) < 75:
                             print('You have found 200 people, 100 soldiers and $200!')
                             money = money + 200
-                            print("Following this success, your country's tension has decreased by 4 percent.")
+                            print("Following this success, your country's tension has decreased by 2 percent.")
                             army = army + 100
                             population = population + 200
-                            tension = tension - 4
+                            tension = tension - 2
                             if tension < 0:
                                 tension = 0
                             
@@ -473,7 +473,7 @@ def start():
                                 print('Success! Your troops defeated the opposition soldiers!')
                                 print('You were also able to convert 7500 enemy soldiers!')
                                 army = army + 7500
-                                print("Your net profit from the war was $25000.")
+                                print("Your net profit from the war was $15000.")
                                 money = money + 25000
                                 print("As a result of your success, your country's tension has decreased by 15%.")
                                 tension = tension - 15
@@ -510,7 +510,7 @@ def start():
                             print('Success! Your troops defeated the opposition soldiers!')
                             print('You were also able to convert 1750 enemy soldiers!')
                             army = army + 1750
-                            print("Your net profit from the war was $11500.")
+                            print("Your net profit from the war was $15500.")
                             money = money + 11500
                             print("As a result of your success, your country's tension has decreased by 12%.")
                             tension = tension - 12
@@ -593,6 +593,7 @@ def start():
                 else:
                     time.sleep(1)
                     print('The uprising could not be put down!')
+                    time.sleep(0.2)
                     if random.randint(0,100) < 25:
                         print("Luckily, you have escaped with a tenth of your army and 400 civilians.")
                         uk = 1
@@ -600,6 +601,7 @@ def start():
                         fr = 1
                         ru = 1
                         ge = 1
+                        sp = 1
                         tension = 0
                         population = 400
                         army = army/10
