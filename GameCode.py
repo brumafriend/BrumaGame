@@ -619,6 +619,10 @@ def start():
                 tension = 35
                 
         if ru + ge + uk + us + fr + sp == 0:
+            time.sleep(1)
+            print("As the dust of war settles, %s has come out on top." % country)
+            time.sleep(0.2)
+            print("You have captured all known enemy land and the rest of the world lives to fear your name.")
             time.sleep(2)
             print("YOU HAVE WON, CONGRATULATIONS!")
             time.sleep(5)
