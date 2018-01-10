@@ -568,7 +568,7 @@ def start():
                 
         if tension >= 25 and tension <= 50:
             time.sleep(1.5)
-            if random.int(0,100) < 10:
+            if random.randint(0,100) < 10:
                 print("")
                 print("A revolt has broken out amongst your population due to high tension.")
                 print("In putting down the revolt, you have lost 200 soldiers.")
