@@ -607,7 +607,7 @@ def start():
                         army = army/10
                     else:
                         print("You have lost everything and everyone. You are captured and sentenced to death.")
-                        print("Game over")
+                        print("Game over.")
                         time.sleep(5)
                         print("New game:")
                         start()                
