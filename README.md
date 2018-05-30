@@ -19,7 +19,7 @@ The mechanics:
 
 **Exploring**: You need 400 civs and 100 soldiers to explore. Exploring can result in gaining civilians and soldiers, this also decreases tension. It can also result in disaster - making you lose the people sent out and causing an increase in tension of 20%.
 
-**War**: The most important aspect of the game is war. Waging war against another country is simple; winning is not. Your chance to win is (x/y)*50 with x being your troops and y being the enemy's. So, if you have equal numbers then there's a 50% chance you win. Upon winning, tension is decreased and you gain troops. You can't attack the same country twice. Upon losing, tension increases and you lose half of your troops. You can try to attack the country again at a later date.
+**War**: The most important aspect of the game is war. Waging war against another country is simple; winning is not. Your chance to win is x/(x+y)*100 with x being your troops and y being the enemy's. So, if you have equal numbers then there's a 50% chance you win. Upon winning, tension is decreased and you gain troops. You can't attack the same country twice. Upon losing, tension increases and you lose half of your troops. You can try to attack the country again at a later date.
 
 **Money**: Money can be used to purchase soldiers. In a desperate situation? Buy your way out of it! You start with $50,000. Winning wars earns you money, losing wars loses you money. Money can also be earned by exploring.
 
@@ -27,4 +27,4 @@ The mechanics:
 
 **Tax:** Low on money? Tax people. Not surprisingly, taxation isn't popular and, whilst raising funds for war, will also result in a huge increase in tension. Taxation should only really be used in emergencies or if you have a very low level of tension. For each person taxed, you gain $1. The tension increase per tax is: (n)*0.00092 with _n_ being the number of people taxed.
 
-**Political Belief:** (as of 01/12/2017) There are currently three political beliefs you, as a country, can adopt free of charge! You can only set your belief once (it cannot be changed), so make it count. If you become Communist, you have a higher chance to win a war. If you become Conservative, you gain less tension from defeats and failures. If you become Liberal, the chance of a civil war breaking out when your tension is above 50% is lower.
+**Political Belief:** There are currently three political beliefs you, as a country, can adopt free of charge! You can only set your belief once (it cannot be changed), so make it count. If you become Communist, you have a higher chance to win a war. If you become Conservative, you gain less tension from defeats and failures. If you become Liberal, the chance of a civil war breaking out when your tension is above 50% is lower.
