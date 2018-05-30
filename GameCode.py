@@ -60,7 +60,7 @@ def start():
                     b = "Conservative"
                     con = con + 5
                     pol = 0
-                    print("Your country is now Conservative!")
+                    print("Your country is now conservative!")
                     time.sleep(0.2)
                     print("As a result of this, tension increase is lowered by 5%.")
                     print("")
