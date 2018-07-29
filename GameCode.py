@@ -210,7 +210,7 @@ def start():
             explore = input("")
             if explore == "1":
                 if population < 400 or army < 100:
-                    print("Can not explore with this few people!")
+                    print("Can not explore with this few people! Your population must be at least 400 your army must contain at least 100 soldiers.")
                 else:
                     print("Sending 500 people to explore...")
                     time.sleep(0.5)
