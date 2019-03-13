@@ -595,7 +595,7 @@ def start():
                     print('The uprising could not be put down!')
                     time.sleep(0.2)
                     if random.randint(0,100) < 25:
-                        print("Luckily, you have escaped with a tenth of your army and 400 civilians.")
+                        print("Luckily, you managed to escape with a tenth of your army and 400 civilians.")
                         uk = 1
                         us = 1
                         fr = 1
