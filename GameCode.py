@@ -94,7 +94,7 @@ def start():
                 tensionincrease = (population)*0.00092
                 print("However, tension has also increased by %d percent." % tensionincrease)
                 tension = tension + tensionincrease - con
-            if tax == "2":
+            elif tax == "2":
                 print("You have taxed half of your population.")
                 time.sleep(0.1)
                 halfmoney = (population/2)*0.15
@@ -104,7 +104,7 @@ def start():
                 tensionincrease = (population/2)*0.00092
                 print("However, tension has also increased by %d percent." % tensionincrease)
                 tension = tension + tensionincrease - con
-            elif not (tax == "2" or tax == "1"):
+            else:
                 print("Incorrect command!")
 
         elif command == "!parade":
