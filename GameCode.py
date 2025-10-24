@@ -265,7 +265,9 @@ def start():
             elif cons + army > 10000:
                 print("You can only conscript soldiers such that your army has 10000 troops!")
                 time.sleep(0.5)
-                cons = 10000 - army
+                cons = cons-((army+cons)-10000)
+                if cons < 0:
+                    cons = 0
                 army = army + cons
                 print("%d people have been conscripted." % cons)
                 tension = tension + (cons/1000)
